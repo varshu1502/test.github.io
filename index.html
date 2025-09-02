@@ -1,41 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varshan | Tech Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varshan | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f4f4f9; color: #333; scroll-behavior: smooth; }
+    header { background: #222; padding: 15px; position: sticky; top: 0; z-index: 100; }
+    .logo { color: #fff; font-size: 24px; font-weight: bold; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; }
+    .nav-links { list-style: none; display: flex; gap: 20px; }
+    .nav-links a { color: #fff; text-decoration: none; transition: 0.3s; }
+    .nav-links a:hover, .active { color: #ff9800; }
+    section { min-height: 100vh; padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(to right, #667eea, #764ba2); color: #fff; }
+    .hero span { color: #ff9800; }
+    .btn { background: #ff9800; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; transition: 0.3s; }
+    .btn:hover { background: #e68900; }
+    .skills-list { list-style: square; margin-left: 20px; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .project-card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .blog article { margin-bottom: 20px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: auto; }
+    .contact-form input, .contact-form textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    .contact-form button { background: #667eea; color: #fff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    .contact-form button:hover { background: #5563c1; }
+    footer { text-align: center; padding: 20px; background: #222; color: #fff; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Varshan</h1>
-        <p>BMSIT Student | Tech Enthusiast</p>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi, I'm Varshan, a passionate student at BMS Institute of Technology (BMSIT).
-            I’ve consistently excelled academically, passing my 10th grade with a remarkable 99% and PU with 96%.
-            My technical journey includes proficiency in Python, C++, and Java. I love sharing knowledge and believe in
-            empowering others to learn and grow in the world of technology.
-        </p>
-    </section>
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>C++</li>
-            <li>Java</li>
-        </ul>
-    </section>
-    <section id="share">
-        <h2>Share Knowledge</h2>
-        <p>
-            I’m always eager to help others learn programming and technology. Feel free to connect with me for collaboration, mentorship, or tech discussions!
-        </p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Varshan</p>
-    </footer>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1 class="logo">Varshan</h1>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="hero">
+    <h2>Hi, I'm <span>Varshan</span></h2>
+    <p>BMSIT Student | Tech Enthusiast | Future Innovator</p>
+    <a href="#about" class="btn">Know More</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm <b>Varshan</b>, a passionate student at <b>BMS Institute of Technology (BMSIT)</b>.
+      I passed my 10th grade with <b>99%</b> and PU with <b>96%</b>.  
+      I specialize in <b>Python, C++, and Java</b> and love solving real-world problems.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+      <li>Python – Data Science, AI, Automation</li>
+      <li>C++ – Problem Solving, Competitive Programming</li>
+      <li>Java – OOP, Web Development</li>
+      <li>HTML, CSS, JS – Frontend Web Development</li>
+      <li>SQL – Databases</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>AI Chatbot</h3>
+        <p>A Python-based chatbot using NLP libraries.</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>My personal responsive portfolio website built with HTML, CSS, and JS.</p>
+      </div>
+      <div class="project-card">
+        <h3>Bank Management System</h3>
+        <p>Java project for managing customer accounts & transactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="blog">
+    <h2>Knowledge Sharing</h2>
+    <article>
+      <h3>Why Python is the Future of AI</h3>
+      <p>Python’s simplicity and strong libraries make it the top choice for AI development...</p>
+      <a href="#">Read More</a>
+    </article>
+    <article>
+      <h3>My Journey in Competitive Programming</h3>
+      <p>How solving problems in C++ helped me improve logical thinking...</p>
+      <a href="#">Read More</a>
+    </article>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Varshan. All rights reserved.</p>
+  </footer>
 </body>
 </html>
